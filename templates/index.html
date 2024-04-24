@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Prediction</title>
+    <link href="../static/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Customer Information</h1>
+    <div class="container">
+        <form action="/prediction" method="post">
+      
+          <label for="age">Enter Age</label>
+          <input type="number" id="age" name="age" placeholder="Age.." required>
+      
+          <label for="salary">Enter Estimated Salary</label>
+          <input type="number" id="salary" step="any" name="salary" placeholder="Salary.." required>
+                  <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+      {% if msg %}
+      <p style="font-size: large;color: crimson;">Prediction : {{msg}}.</p>
+  {% endif %}
 
+    
+  
+</body>
+</html>
